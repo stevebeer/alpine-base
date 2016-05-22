@@ -1,4 +1,5 @@
-#cat << EOM >> Dockerfile
+#!/bin/sh
+
 FROM hypriot/rpi-alpine-scratch
 
 RUN apk update && \
@@ -7,4 +8,4 @@ apk add bash && \
 rm -rf /var/cache/apk/*
 
 CMD ["/bin/bash"]
-#EOM
+
